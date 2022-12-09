@@ -1,0 +1,8 @@
+D:\Backend\myIdea\FinalTutorial\Tutorial1\bin\Debug\Tutorial1.exe.config
+D:\Backend\myIdea\FinalTutorial\Tutorial1\bin\Debug\Tutorial1.exe
+D:\Backend\myIdea\FinalTutorial\Tutorial1\bin\Debug\Tutorial1.pdb
+D:\Backend\myIdea\FinalTutorial\Tutorial1\obj\Debug\Tutorial1.csproj.AssemblyReference.cache
+D:\Backend\myIdea\FinalTutorial\Tutorial1\obj\Debug\Tutorial1.csproj.SuggestedBindingRedirects.cache
+D:\Backend\myIdea\FinalTutorial\Tutorial1\obj\Debug\Tutorial1.csproj.CoreCompileInputs.cache
+D:\Backend\myIdea\FinalTutorial\Tutorial1\obj\Debug\Tutorial1.exe
+D:\Backend\myIdea\FinalTutorial\Tutorial1\obj\Debug\Tutorial1.pdb
