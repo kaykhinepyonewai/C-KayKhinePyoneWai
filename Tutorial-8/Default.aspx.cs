@@ -90,7 +90,9 @@ namespace Tutorial_8
 
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            
+            lbName.Visible = false;
+            GridView1.EditIndex = e.NewEditIndex;
+            showData();
         }
 
         protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
@@ -105,17 +107,41 @@ namespace Tutorial_8
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            
+            lbName.Visible = false;
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            string name = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            con.Open();
+
+            string updateData = "update cats set name=@name where id=@id";
+            SqlCommand cmd = new SqlCommand(updateData, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.ExecuteNonQuery();
+            Response.Write("<script>alert('Data has updated') </script>");
+            con.Close();
+            GridView1.EditIndex = -1;
+            showData();
         }
 
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-            
+            lbName.Visible = false;
+            GridView1.EditIndex = -1;
+            showData();
         }
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            
+            lbName.Visible = false;
+            con.Open();
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            string deleteData = "delete from cats where id=@id";
+            SqlCommand cmd = new SqlCommand(deleteData, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+            Response.Write("<script>confirm('Data has Deleted')</script>");
+            con.Close();
+            showData();
         }
 
        

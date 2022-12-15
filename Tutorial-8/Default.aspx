@@ -14,31 +14,31 @@
                     <asp:Label ID="Label1" runat="server" Text="Cat Name : " CssClass="name" ForeColor="Black"></asp:Label>
                 </td>
                 <td style="height: 36px">
-                    <asp:TextBox ID="txtName" runat="server" Width="199px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Please Filled Cat Name" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtName" runat="server" Width="199px" ValidationGroup="entryForm"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ValidationGroup="entryForm" ErrorMessage="Please Filled Cat Name" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="modal-sm" style="width: 235px; height: 57px;"></td>
                 <td style="height: 57px; width: 181px"></td>
                 <td style="height: 57px">
-                    <asp:Button ID="btnInsert" runat="server" ForeColor="#009933" Text="Insert Data" OnClick="btnInsert_Click" />
-                   &nbsp;&nbsp;<asp:Label ID="lbName" runat="server" Text="Name is already Exit...." Visible="False" ForeColor="#FF0066"></asp:Label> 
+                    <asp:Button ID="btnInsert" runat="server" ForeColor="#009933" Text="Insert Data" ValidationGroup="entryForm" OnClick="btnInsert_Click" />
+                   &nbsp;&nbsp;<asp:Label ID="lbName" runat="server" Text="Name is already Exit...." Visible="False" ValidationGroup="entryForm" ControlToValidate="txtName" ForeColor="#FF0066"></asp:Label> 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:PlaceHolder ID="dataListForm" runat="server">
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DataListForm.aspx">Go To Data List Form</asp:HyperLink>
-                    </asp:PlaceHolder>
+                   
                     </td>
             </tr>
             <tr>
                 <td class="modal-sm" style="width: 235px">&nbsp;</td>
                 <td style="width: 181px">&nbsp;</td>
                 <td>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="691px" OnRowEditing="GridView1_RowEditing" OnRowUpdated="GridView1_RowUpdated" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-left: 5px" DataKeyNames="id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting">
+                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1014px" OnRowEditing="GridView1_RowEditing" OnRowUpdated="GridView1_RowUpdated" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-left: 5px" DataKeyNames="id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
-                            <asp:BoundField DataField="id" HeaderText="Id" />
+                            <asp:BoundField DataField="id" HeaderText="Id" ReadOnly="True" />
                             <asp:BoundField DataField="name" HeaderText="Cat Name" />
+                            <asp:CommandField ButtonType="Button" HeaderText="Action" ShowEditButton="True" />
+                            <asp:CommandField ButtonType="Button" HeaderText="Action" ShowDeleteButton="True"/>
                         </Columns>
                         <EditRowStyle BackColor="#7C6F57" />
                         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

@@ -60,24 +60,6 @@ namespace Tutorial_8
         protected global::System.Web.UI.WebControls.Label lbName;
 
         /// <summary>
-        /// dataListForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder dataListForm;
-
-        /// <summary>
-        /// HyperLink3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
-
-        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
