@@ -1,0 +1,9 @@
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\bin\Debug\Training.DAO.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\bin\Debug\Training.DAO.pdb
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\bin\Debug\Training.Entities.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\bin\Debug\Training.Entities.pdb
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\obj\Debug\Training.DAO.csproj.AssemblyReference.cache
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\obj\Debug\Training.DAO.csproj.CoreCompileInputs.cache
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\obj\Debug\Training.DAO.csproj.CopyComplete
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\obj\Debug\Training.DAO.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.DAO\obj\Debug\Training.DAO.pdb

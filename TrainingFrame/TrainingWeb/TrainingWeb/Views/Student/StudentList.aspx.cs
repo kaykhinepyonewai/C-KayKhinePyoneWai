@@ -1,0 +1,79 @@
+﻿using Training.Services.Student;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+
+namespace TrainingWeb.Views.Student
+{
+    public partial class StudentList : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            bindData();
+        }
+
+        void bindData()
+        {
+            StudentService studentService = new StudentService();
+            DataTable dt = studentService.GetAll();
+
+            gvStudent.DataSource = dt;
+            gvStudent.DataBind();
+
+        }
+
+        protected void lnkbtnNew_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Student/Student.aspx");
+        }
+
+        protected void gvStudent_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Edit")
+            {
+                Response.Redirect("~/Views/Student/Student.aspx?id=" + e.CommandArgument);
+            }
+        }
+
+        protected void gvStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+            Label lblStudentID = (Label)gvStudent.Rows[e.RowIndex].FindControl("lblStudentID");
+
+            StudentService studentService = new StudentService();
+
+            bool success = studentService.Delete(Convert.ToInt32(lblStudentID.Text));
+
+            if (success)
+            {
+                bindData();
+            }
+        }
+
+        protected void gvStudent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvEmployee_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void gvEmployee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        protected void gvEmployee_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
+
+    }
+}

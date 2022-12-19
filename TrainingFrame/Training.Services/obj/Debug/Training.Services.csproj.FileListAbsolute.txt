@@ -1,0 +1,11 @@
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\bin\Debug\Training.Services.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\bin\Debug\Training.Services.pdb
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\bin\Debug\Training.DAO.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\bin\Debug\Training.Entities.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\bin\Debug\Training.DAO.pdb
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\bin\Debug\Training.Entities.pdb
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\obj\Debug\Training.Services.csproj.AssemblyReference.cache
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\obj\Debug\Training.Services.csproj.CoreCompileInputs.cache
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\obj\Debug\Training.Services.csproj.CopyComplete
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\obj\Debug\Training.Services.dll
+D:\Backend\myIdea\FinalTutorial\TrainingFrame\Training.Services\obj\Debug\Training.Services.pdb
