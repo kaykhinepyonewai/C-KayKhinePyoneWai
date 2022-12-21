@@ -1,4 +1,4 @@
-select * from cats
-select DISTINCT name From cats
-select * from dogs 
-select DISTINCT name From dogs
+select * from Cats
+select DISTINCT Name From Cats
+select * from Dogs 
+select DISTINCT Name From Dogs
