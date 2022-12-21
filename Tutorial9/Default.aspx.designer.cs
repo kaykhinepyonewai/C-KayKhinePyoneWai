@@ -42,21 +42,21 @@ namespace Tutorial9
         protected global::System.Web.UI.WebControls.Label lblMsg;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// revFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revFile;
 
         /// <summary>
-        /// GridView1 control.
+        /// gvList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvList;
     }
 }

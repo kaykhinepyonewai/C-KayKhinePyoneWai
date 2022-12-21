@@ -27,17 +27,17 @@ namespace Tutorial9
             if (FileExt == ".xls" || FileExt == ".xlsx")
             {
                 lblMsg.Visible = false;
-                excelUpload();
+                ExcelUpload();
             }
             else if(FileExt == ".csv")
             {
                 lblMsg.Visible = false;
-                csvUpload();
+                CsvUpload();
             }
             else if(FileExt == ".txt")
             {
                 lblMsg.Visible = false;
-                txtUpload();
+                TxtUpload();
             }
             else
             {
@@ -46,7 +46,7 @@ namespace Tutorial9
             }
         }
 
-        void txtUpload()
+        void TxtUpload()
         {
           
             string txtPath = Server.MapPath("~/Datas/") + Path.GetFileName(FileUploadTo.PostedFile.FileName);
@@ -80,11 +80,11 @@ namespace Tutorial9
                     }
                 }
             }
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            gvList.DataSource = dt;
+            gvList.DataBind();
         }
 
-         void csvUpload()
+         void CsvUpload()
         {
             string csvPath = Server.MapPath("~/Datas/") + Path.GetFileName(FileUploadTo.PostedFile.FileName);
             FileUploadTo.SaveAs(csvPath);
@@ -113,12 +113,12 @@ namespace Tutorial9
                     }
                 }
             }
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            gvList.DataSource = dt;
+            gvList.DataBind();
         }
 
 
-        void excelUpload()
+        void ExcelUpload()
         {
             string FilePath = ConfigurationManager.AppSettings["FilePath"].ToString();
             string filename = string.Empty;
@@ -170,8 +170,8 @@ namespace Tutorial9
                                             dr[x++] = worksheet.Cells[row, col].Value;
                                         }
                                         dt.Rows.Add(dr);
-                                        GridView1.DataSource = dt;
-                                        GridView1.DataBind();
+                                        gvList.DataSource = dt;
+                                        gvList.DataBind();
                                     }
                                 }
 

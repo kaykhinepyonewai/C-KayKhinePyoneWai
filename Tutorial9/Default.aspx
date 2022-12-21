@@ -21,14 +21,14 @@
         <tr>
             <td style="width: 355px; height: 20px">
                 <asp:Label ID="lblMsg" runat="server" Text="" Visible="False" ForeColor="#FF3300"></asp:Label>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="FileUploadTo" ValidationGroup="" ErrorMessage="Please Choose Text file || Excel File || CSV File" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="revFile" runat="server" ControlToValidate="FileUploadTo" ValidationGroup="" ErrorMessage="Please Choose Text file || Excel File || CSV File" ForeColor="#FF3300"></asp:RequiredFieldValidator>
             </td>
             <td style="width: 498px; height: 20px"></td>
             <td style="height: 20px"></td>
         </tr>
         <tr>
             <td style="width: 355px">&nbsp;</td>
-            <td style="width: 498px"><asp:GridView ID="GridView1" runat="server" Width="99%" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <td style="width: 498px"><asp:GridView ID="gvList" runat="server" Width="99%" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
