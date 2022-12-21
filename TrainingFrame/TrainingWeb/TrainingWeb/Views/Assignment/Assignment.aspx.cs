@@ -23,12 +23,12 @@ namespace TrainingWeb.Views.Assignment
                 {
                     btnSave.Text = "Update";
                     hdAssignmentId.Value = Request.QueryString["id"].ToString();
-                    bindData();
+                    BindData();
                 }
             }
         }
 
-        void bindData()
+        void BindData()
         {
             AssignmentService assignmentService = new AssignmentService();
             DataTable dt = assignmentService.Get(Convert.ToInt32(hdAssignmentId.Value));

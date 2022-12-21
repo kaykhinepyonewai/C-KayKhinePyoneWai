@@ -21,13 +21,13 @@ namespace TrainingWeb.Views.Student
                 {
                     btnSave.Text = "Update";
                     hdStudentId.Value = Request.QueryString["id"].ToString();
-                    bindData();
+                    BindData();
                 }
                
             }
         }
 
-        void bindData()
+        void BindData()
         {
             StudentService studentService = new StudentService();
 

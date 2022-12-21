@@ -15,10 +15,10 @@ namespace TrainingWeb.Views.Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
        {
-            bilndData();
+            BilndData();
         }
 
-        void bilndData()
+        void BilndData()
         {
             AssignmentService assignmentService = new AssignmentService();
             DataTable dt = assignmentService.GetAll();
@@ -52,13 +52,8 @@ namespace TrainingWeb.Views.Assignment
 
             if(success)
             {
-                bilndData();
+                BilndData();
             }
-        }
-
-        protected void gvAssignment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

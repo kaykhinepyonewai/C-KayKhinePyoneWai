@@ -9,7 +9,7 @@
         </div>
     </div>
     
-    <asp:GridView ID="gvStudent" runat="server" CssClass="table table-bordered table-striped mt-3" AutoGenerateColumns="False" OnRowCommand="gvStudent_RowCommand" OnRowDeleting="gvStudent_RowDeleting" OnSelectedIndexChanged="gvStudent_SelectedIndexChanged">
+    <asp:GridView ID="gvStudent" runat="server" CssClass="table table-bordered table-striped mt-3" AutoGenerateColumns="False" OnRowCommand="gvStudent_RowCommand" OnRowDeleting="gvStudent_RowDeleting" >
         <Columns>
             <asp:TemplateField HeaderText="Id">
                 <ItemTemplate>
