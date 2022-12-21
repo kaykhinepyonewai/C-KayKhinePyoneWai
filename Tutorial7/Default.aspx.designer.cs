@@ -24,13 +24,13 @@ namespace Tutorial7
         protected global::System.Web.UI.WebControls.Label errorMSG;
 
         /// <summary>
-        /// Label1 control.
+        /// lblGamil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblGamil;
 
         /// <summary>
         /// txtGamil control.
@@ -42,31 +42,31 @@ namespace Tutorial7
         protected global::System.Web.UI.WebControls.TextBox txtGamil;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// reqGmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqGmail;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// revGmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revGmail;
 
         /// <summary>
-        /// Label2 control.
+        /// lblPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblPassword;
 
         /// <summary>
         /// txtPassword control.
@@ -78,13 +78,13 @@ namespace Tutorial7
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// revPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revPassword;
 
         /// <summary>
         /// btnLogin control.
