@@ -50,8 +50,8 @@
                <td style="width: 155px">&nbsp;</td>
                <td style="width: 93px">&nbsp;</td>
                <td>
-                   <asp:TextBox ID="txtGmail" runat="server" placeholder="Enter Email :" Visible="false" ValidationGroup="gmailForm" Width="213px"></asp:TextBox>
-                   <asp:RequiredFieldValidator ID="regEmail" runat="server" ErrorMessage="Please Filled Gamil Address" ControlToValidate="txtGmail"  ValidationGroup="gmailForm" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                   <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter Email :" Visible="false" ValidationGroup="gmailForm" Width="213px"></asp:TextBox>
+                   <asp:RequiredFieldValidator ID="regEmail" runat="server" ErrorMessage="Please Filled Gamil Address" ControlToValidate="txtEmail"  ValidationGroup="gmailForm" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                </td>
            </tr>
            <tr>
@@ -66,7 +66,7 @@
                    <asp:Button ID="btnSend" CssClass="btn btn-info" runat="server" Text="Send"  ValidationGroup="gmailForm" Visible="false" OnClick="btnSend_Click" Width="65px" />
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    <asp:Label ID="lblMsg" runat="server"></asp:Label>
-                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"  ControlToValidate="txtGmail" ErrorMessage="Please Format Gmail" ValidationGroup="gmailForm" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"  ControlToValidate="txtEmail" ErrorMessage="Please Format Email" ValidationGroup="gmailForm" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                </td>
            </tr>
        </table>

@@ -23,7 +23,7 @@ namespace Tutorial10
 
         protected void btnForget_Click(object sender, EventArgs e)
         {
-            txtGmail.Visible = true;
+            txtEmail.Visible = true;
             btnSend.Visible = true;
         }
 
@@ -39,11 +39,11 @@ namespace Tutorial10
             message.Subject = "Password reset link";
             //message.Body = "Please <a href=\"http://localhost:62093/ResetPassword.aspx\">Password reset link</a>";
             message.Body = "<html><head><title>PasswordResetPage</title><h1 style='text-align:center;color:#56b880'>Please Click Below Link For Reset</h1><a style='margin-left:30px;color:#56b880;margin-top:20px;font-size:16px' href=\"http://localhost:62093/ResetPassword.aspx\">Password reset link</a><body></html> ";
-            message.To.Add(txtGmail.Text.ToString());
+            message.To.Add(txtEmail.Text.ToString());
             try
             {
                 smtp.Send(message);
-                Response.Write("<script>alert('Reset Link is reached to your Gamil,Please Check It....') </script>");
+                Response.Write("<script>alert('Reset Link is reached to your Email,Please Check It....') </script>");
             }
             catch (SmtpException ex)
             {
