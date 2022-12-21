@@ -45,7 +45,7 @@
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style5">
-                        <asp:Label ID="Label1" runat="server" Text="Confirm Password" TextMode="Password"></asp:Label>
+                        <asp:Label ID="lblConfiPass" runat="server" Text="Confirm Password" TextMode="Password"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtConfirmPass" runat="server" Width="156px" TextMode="Password" ValidationGroup="confirmGp"></asp:TextBox>
@@ -60,12 +60,12 @@
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmPass" ErrorMessage="Please Filled Confirm Password" Font-Size="Small" ForeColor="#FF3300" ValidationGroup="confirmGp"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="revConfPass" runat="server" ControlToValidate="txtConfirmPass" ErrorMessage="Please Filled Confirm Password" Font-Size="Small" ForeColor="#FF3300" ValidationGroup="confirmGp"></asp:RequiredFieldValidator>
                     </td>
                     <td>
                         <asp:Button ID="btnUpdate" CssClass="btn btn-info" runat="server" OnClick="btnClick" Text="Update" ValidationGroup="newPassGp" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Filled New Password " ControlToValidate="txtNewPass" Font-Size="Small" ForeColor="#FF3300" ValidationGroup="newPassGp"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="revNewPass" runat="server" ErrorMessage="Please Filled New Password " ControlToValidate="txtNewPass" Font-Size="Small" ForeColor="#FF3300" ValidationGroup="newPassGp"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>

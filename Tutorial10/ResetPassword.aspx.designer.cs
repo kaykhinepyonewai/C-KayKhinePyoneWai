@@ -33,13 +33,13 @@ namespace Tutorial10
         protected global::System.Web.UI.WebControls.TextBox txtNewPass;
 
         /// <summary>
-        /// Label1 control.
+        /// lblConfiPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblConfiPass;
 
         /// <summary>
         /// txtConfirmPass control.
@@ -51,13 +51,13 @@ namespace Tutorial10
         protected global::System.Web.UI.WebControls.TextBox txtConfirmPass;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// revConfPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revConfPass;
 
         /// <summary>
         /// btnUpdate control.
@@ -69,12 +69,12 @@ namespace Tutorial10
         protected global::System.Web.UI.WebControls.Button btnUpdate;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// revNewPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revNewPass;
     }
 }
