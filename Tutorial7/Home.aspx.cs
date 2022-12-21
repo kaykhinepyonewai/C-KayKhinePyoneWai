@@ -11,7 +11,7 @@ namespace Tutorial7
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["Gmail"] == null)
+            if(Session["Email"] == null)
             {
                 LoginPlaceHolder1.Visible = true;
                 LogoutPlaceHolder1.Visible = false;

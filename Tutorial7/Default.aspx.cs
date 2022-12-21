@@ -18,7 +18,7 @@ namespace Tutorial7
         {
             if(txtPassword.Text.ToString() == "12345")
             {
-                Session["Gmail"] = txtGamil.Text.ToString();
+                Session["Email"] = txtEmail.Text.ToString();
                 Session["Password"] = txtPassword.Text.ToString();
                 Response.Redirect("Home.aspx");
             }

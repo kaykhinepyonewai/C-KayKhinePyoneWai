@@ -11,7 +11,7 @@
         <div>
             <h1>Welcome To Home Page </h1>
             <asp:PlaceHolder ID="LogoutPlaceHolder1" runat="server" Visible="false">
-            <b>Your Gmail Address: <%=HttpContext.Current.Session["gmail"] %></b>
+            <b>Your Email Address: <%=HttpContext.Current.Session["Email"] %></b>
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
