@@ -1,1 +1,1 @@
-select m.FullNames as FULLNAME,m.Address as ADDRESS,r.MovieRented as MOVIESRENTED,s.Salutation as SALUTATION from ((Member as m INNER JOIN Rent as r ON m.MemberId = r.MemberId) INNER JOIN Salutation as s ON m.SalutationId=s.SalutationId);
+select m.FullName as FULLNAME,m.Address as ADDRESS,r.MovieRented as MOVIESRENTED,s.Salutation as SALUTATION from ((Member as m INNER JOIN Rent as r ON m.MemberId = r.MemberId) INNER JOIN Salutation as s ON m.SalutationId=s.SalutationId);
