@@ -11,11 +11,11 @@
                     
                 </td>
                 <td style="height: 36px; width: 181px">
-                    <asp:Label ID="Label1" runat="server" Text="Cat Name : " CssClass="name" ForeColor="Black"></asp:Label>
+                    <asp:Label ID="lblCat" runat="server" Text="Cat Name : " CssClass="name" ForeColor="Black"></asp:Label>
                 </td>
                 <td style="height: 36px">
                     <asp:TextBox ID="txtName" runat="server" Width="199px" ValidationGroup="entryForm"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ValidationGroup="entryForm" ErrorMessage="Please Filled Cat Name" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="revCatName" runat="server" ControlToValidate="txtName" ValidationGroup="entryForm" ErrorMessage="Please Filled Cat Name" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -32,7 +32,7 @@
                 <td class="modal-sm" style="width: 235px">&nbsp;</td>
                 <td style="width: 181px">&nbsp;</td>
                 <td>
-                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1014px" OnRowEditing="GridView1_RowEditing" OnRowUpdated="GridView1_RowUpdated" OnRowUpdating="GridView1_RowUpdating" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-left: 5px" DataKeyNames="id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting">
+                     <asp:GridView ID="gvList" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1014px" OnRowEditing="gvList_RowEditing" OnRowUpdating="gvList_RowUpdating" style="margin-left: 5px" DataKeyNames="id" OnRowCancelingEdit="gvList_RowCancelingEdit" OnRowDeleting="gvList_RowDeleting">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="Id" ReadOnly="True" />

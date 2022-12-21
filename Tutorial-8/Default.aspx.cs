@@ -17,23 +17,23 @@ namespace Tutorial_8
         {
             if (!IsPostBack)
             {
-                showData();
+                ShowData();
                 btnInsert.Enabled = true;
             }
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
         {
-            checkingName();
+            CheckingName();
             con.Close();
-            showData();
+            ShowData();
         }
 
-        void checkingName()
+        void CheckingName()
         {
             int count = 0;
             con.Open();
-            string showt = "select COUNT(*) from cats where name=@name1";
+            string showt = "select COUNT(*) from Cats where Name=@name1";
             SqlCommand cmd = new SqlCommand(showt, con);
             cmd.Parameters.AddWithValue("@name1", txtName.Text.ToString());
             count = Convert.ToInt32(cmd.ExecuteScalar());
@@ -44,7 +44,7 @@ namespace Tutorial_8
             }
             else
             {
-                string insertCats = "insert into [cats] (name) values (@name)";
+                string insertCats = "insert into [Cats] (Name) values (@name)";
                 SqlCommand cmd1 = new SqlCommand(insertCats, con);
                 cmd1.Parameters.AddWithValue("@name", txtName.Text.ToString());
                 cmd1.ExecuteNonQuery();
@@ -57,25 +57,25 @@ namespace Tutorial_8
             btnInsert.Enabled = true;
 
         }
-        void showData()
+        void ShowData()
         {
             con.Open();
-            string showData = "select * from cats";
+            string showData = "select * from Cats";
             SqlCommand cmd = new SqlCommand(showData, con);
             SqlDataAdapter d = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             d.Fill(dt);
             if(dt.Rows.Count>0)
             {
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                gvList.DataSource = dt;
+                gvList.DataBind();
             }
             else
             {
                 DataRow dr = dt.NewRow();
                 dt.Rows.Add(dr);
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                gvList.DataSource = dt;
+                gvList.DataBind();
             }
 
             txtName.Text = "";
@@ -88,62 +88,52 @@ namespace Tutorial_8
             Response.Redirect("DataListForm.aspx");
         }
 
-        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void gvList_RowEditing(object sender, GridViewEditEventArgs e)
         {
             lbName.Visible = false;
-            GridView1.EditIndex = e.NewEditIndex;
-            showData();
+            gvList.EditIndex = e.NewEditIndex;
+            ShowData();
         }
 
-        protected void GridView1_RowUpdated(object sender, GridViewUpdatedEventArgs e)
-        {
-          
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        protected void gvList_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             lbName.Visible = false;
-            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
-            string name = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            int id = Convert.ToInt32(gvList.DataKeys[e.RowIndex].Value.ToString());
+            string name = ((TextBox)gvList.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
             con.Open();
 
-            string updateData = "update cats set name=@name where id=@id";
+            string updateData = "update Cats set Name=@name where Id=@id";
             SqlCommand cmd = new SqlCommand(updateData, con);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@name", name);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Data has updated') </script>");
             con.Close();
-            GridView1.EditIndex = -1;
-            showData();
+            gvList.EditIndex = -1;
+            ShowData();
         }
 
-        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        protected void gvList_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             lbName.Visible = false;
-            GridView1.EditIndex = -1;
-            showData();
+            gvList.EditIndex = -1;
+            ShowData();
         }
 
-        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        protected void gvList_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             lbName.Visible = false;
             con.Open();
-            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
-            string deleteData = "delete from cats where id=@id";
+            int id = Convert.ToInt32(gvList.DataKeys[e.RowIndex].Value.ToString());
+            string deleteData = "delete from Cats where Id=@id";
             SqlCommand cmd = new SqlCommand(deleteData, con);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.ExecuteNonQuery();
             Response.Write("<script>confirm('Data has Deleted')</script>");
             con.Close();
-            showData();
+            ShowData();
         }
 
-       
+        
     }
 }

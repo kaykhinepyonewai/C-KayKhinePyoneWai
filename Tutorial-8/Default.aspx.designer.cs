@@ -15,13 +15,13 @@ namespace Tutorial_8
     {
 
         /// <summary>
-        /// Label1 control.
+        /// lblCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblCat;
 
         /// <summary>
         /// txtName control.
@@ -33,13 +33,13 @@ namespace Tutorial_8
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// revCatName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCatName;
 
         /// <summary>
         /// btnInsert control.
@@ -60,12 +60,12 @@ namespace Tutorial_8
         protected global::System.Web.UI.WebControls.Label lbName;
 
         /// <summary>
-        /// GridView1 control.
+        /// gvList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvList;
     }
 }
