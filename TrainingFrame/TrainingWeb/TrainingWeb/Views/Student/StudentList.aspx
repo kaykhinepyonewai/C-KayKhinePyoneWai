@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentList.aspx.cs" Inherits="TrainingWeb.Views.Student.StudentList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <h1 class="title" style="text-align:center">Student List From</h1>
        <div class="row mtt mbb">
         <div clas="col-md-12 mb-3 text-end ">
-            <asp:LinkButton ID="lnkbtnNew" runat="server" CssClass="btn btn-primary" OnClick="lnkbtnNew_Click">
+            <asp:LinkButton ID="lnkbtnNew" runat="server" CssClass="btn btn-warning" OnClick="lnkbtnNew_Click">
                 New
             </asp:LinkButton>
         </div>
@@ -15,7 +16,7 @@
                    <asp:Label ID="lblStudentID" runat="server" Text='<%# Eval("StudentID") %>' ></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Name">
+            <asp:TemplateField HeaderText="Student Name">
                 <ItemTemplate>
                    <asp:Label ID="lblName" runat="server" Text='<%# Eval("Name") %>' ></asp:Label>
                 </ItemTemplate>
@@ -42,10 +43,10 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Actions">
                 <ItemTemplate>
-                   <asp:LinkButton ID="lnkbtnEdit" runat="server" CssClass="btn btn-primary btn-sm" CommandName="Edit" CommandArgument='<%# Eval("StudentID") %>'>
+                   <asp:LinkButton ID="lnkbtnEdit" runat="server" CssClass="btn btn-warning btn-sm" CommandName="Edit" CommandArgument='<%# Eval("StudentID") %>'>
                        Edit
                    </asp:LinkButton>
-                     <asp:LinkButton ID="lnkbtnDelete" runat="server"  CssClass="btn btn-danger btn-sm" CommandName="Delete" CommandArgument='<%# Eval("StudentID") %>'>
+                     <asp:LinkButton ID="lnkbtnDelete" runat="server"  CssClass="btn btn-info btn-sm" CommandName="Delete" CommandArgument='<%# Eval("StudentID") %>'>
                        Delete
                    </asp:LinkButton>
                 </ItemTemplate>

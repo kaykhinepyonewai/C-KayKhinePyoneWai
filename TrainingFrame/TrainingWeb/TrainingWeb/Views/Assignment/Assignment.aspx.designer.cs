@@ -7,66 +7,75 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingWeb.Views.Student
+namespace TrainingWeb.Views.Assignment
 {
 
 
-    public partial class Student
+    public partial class Assignment
     {
 
         /// <summary>
-        /// hdStudentId control.
+        /// hdAssignmentId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdStudentId;
+        protected global::System.Web.UI.WebControls.HiddenField hdAssignmentId;
 
         /// <summary>
-        /// txtName control.
+        /// txtStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtStudentName;
 
         /// <summary>
-        /// txtAddress control.
+        /// txtTeacherName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddress;
+        protected global::System.Web.UI.WebControls.TextBox txtTeacherName;
 
         /// <summary>
-        /// txtCourseName control.
+        /// txtAssignmentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCourseName;
+        protected global::System.Web.UI.WebControls.TextBox txtAssignmentName;
 
         /// <summary>
-        /// txtCourseFee control.
+        /// txtClassName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCourseFee;
+        protected global::System.Web.UI.WebControls.TextBox txtClassName;
 
         /// <summary>
-        /// txtJoiningDate control.
+        /// txtRemark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtJoiningDate;
+        protected global::System.Web.UI.WebControls.TextBox txtRemark;
+
+        /// <summary>
+        /// txtFinishedDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFinishedDate;
 
         /// <summary>
         /// revDate control.

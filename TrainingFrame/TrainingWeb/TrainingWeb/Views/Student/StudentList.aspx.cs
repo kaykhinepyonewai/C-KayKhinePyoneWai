@@ -41,10 +41,11 @@ namespace TrainingWeb.Views.Student
 
         protected void gvStudent_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-
+            
             Label lblStudentID = (Label)gvStudent.Rows[e.RowIndex].FindControl("lblStudentID");
 
             StudentService studentService = new StudentService();
+            Response.Write("<script>confirm('Data has Deleted.....')</script>");
 
             bool success = studentService.Delete(Convert.ToInt32(lblStudentID.Text));
 

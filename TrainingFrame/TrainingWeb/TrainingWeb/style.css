@@ -1,8 +1,19 @@
 ﻿body {
 }
 
-.mtt{
-    margin-top:20px;
+.title {
+    text-align: center;
+    color: #db9f4b;
+    margin-bottom:30px;
+   
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #db9f4b;
+}
+
+.mtt {
+    margin-top: 20px;
 }
 
 .mbb
@@ -10,8 +21,18 @@
     margin-bottom:20px;
 }
 
-/*
-#btnCancel
-{
-    background-color:red;
-}*/
+.navbar {
+    background-color: #660630;
+}
+
+.nav li a {
+    color: #db9f4b;
+}
+
+.navbar-header a {
+    color: #db9f4b;
+}
+
+.cancel {
+    background-color: #660630;
+}
