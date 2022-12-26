@@ -1,0 +1,46 @@
+﻿body {
+    background-color: red;
+}
+
+.container .btnTop {
+    margin-bottom: 10px;
+}
+
+.salutationList .title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.mtt {
+    margin-top: 20px;
+}
+
+
+.mbb {
+    margin-bottom: 20px;
+}
+
+
+
+.title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#gvRent
+{
+    margin-top: 20px;
+}
+
+.img1 {
+    width: 550px;
+    height: 100px;
+}
+
+
+.buttonAll
+{
+    
+    margin-bottom:20px;
+}
+

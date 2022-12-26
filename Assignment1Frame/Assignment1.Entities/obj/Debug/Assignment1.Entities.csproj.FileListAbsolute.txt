@@ -1,0 +1,6 @@
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.Entities\bin\Debug\Assignment1.Entities.dll
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.Entities\bin\Debug\Assignment1.Entities.pdb
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.Entities\obj\Debug\Assignment1.Entities.csproj.AssemblyReference.cache
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.Entities\obj\Debug\Assignment1.Entities.csproj.CoreCompileInputs.cache
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.Entities\obj\Debug\Assignment1.Entities.dll
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.Entities\obj\Debug\Assignment1.Entities.pdb

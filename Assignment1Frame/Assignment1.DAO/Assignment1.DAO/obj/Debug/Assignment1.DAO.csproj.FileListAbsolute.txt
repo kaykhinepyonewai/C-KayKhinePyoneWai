@@ -1,0 +1,9 @@
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\obj\Debug\Assignment1.DAO.csproj.AssemblyReference.cache
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\obj\Debug\Assignment1.DAO.csproj.CoreCompileInputs.cache
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\bin\Debug\Assignment1.DAO.dll
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\bin\Debug\Assignment1.DAO.pdb
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\bin\Debug\Assignment1.Entities.dll
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\bin\Debug\Assignment1.Entities.pdb
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\obj\Debug\Assignment1.DAO.csproj.CopyComplete
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\obj\Debug\Assignment1.DAO.dll
+D:\Backend\myIdea\FinalTutorial\Assignment1Frame\Assignment1.DAO\Assignment1.DAO\obj\Debug\Assignment1.DAO.pdb
