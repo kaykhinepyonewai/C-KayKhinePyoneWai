@@ -1,13 +1,9 @@
 ﻿using Assignment1.DAO.Common;
-using Assignment1.Entities.Member;
 using Assignment1.Entities.Rent;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Assignment1.DAO.Rent
 {
@@ -18,21 +14,17 @@ namespace Assignment1.DAO.Rent
 
         private string strSql = String.Empty;
 
-        private DataTable resultDataTable = new DataTable();
-
-        private int existCount;
-
         public DataTable GetAll()
         {
-            //strSql = "select * from ((Member as m INNER JOIN Rent as r ON m.MemberId = r.MemberId) INNER JOIN Salutation as s ON m.SalutationId=s.SalutationId);";
-            strSql = "select * From Rent,Member Where Rent.MemberId=Member.MemberId";
+            strSql = "select * from Rent";
+
             return connection.ExecuteDataTable(CommandType.Text, strSql);
         }
 
 
         public DataTable Get(int id)
-        {
-            strSql = "select * from Rent,Member WHERE Rent.RentedId=" + id + " and Rent.MemberId=Member.MemberId";
+        { 
+            strSql = "select * from Rent WHERE Rent.RentedId=" + id ;
             return connection.ExecuteDataTable(CommandType.Text, strSql);
 
         }
@@ -42,7 +34,7 @@ namespace Assignment1.DAO.Rent
             strSql = "SELECT COUNT(*) FROM Rent WHERE MovieRented=" + "@MovieRented";
             SqlParameter[] sqlPara =
            {
-                 new SqlParameter("@MovieRented",rentEntity.movierented),
+                 new SqlParameter("@MovieRented",rentEntity.MovieRented),
             };
 
             int sucess = Convert.ToInt32(connection.ExecuteScalar(CommandType.Text, strSql, sqlPara));
@@ -53,12 +45,11 @@ namespace Assignment1.DAO.Rent
         public bool Insert(RentEntity rentEntity)
         {
             
-            strSql = "INSERT INTO Rent(MovieRented,MemberId) " + "VALUES (@MovieRented,@MemberId)";
+            strSql = "INSERT INTO Rent(MovieRented) " + "VALUES (@MovieRented)";
             SqlParameter[] sqlPara =
             {
-                new SqlParameter("@MovieRented",rentEntity.movierented),
-                new SqlParameter("@MemberId",rentEntity.memberid),
-
+                new SqlParameter("@MovieRented",rentEntity.MovieRented),
+               
             };
 
             bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlPara);
@@ -68,12 +59,12 @@ namespace Assignment1.DAO.Rent
 
         public bool Update(RentEntity rentEntity)
         {
-            strSql = "UPDATE Rent SET MovieRented=@MovieRented,MemberId=@MemberId WHERE RentedId=@RentedId";
+            
+            strSql = "UPDATE Rent SET MovieRented=@MovieRented WHERE RentedId=@RentedId";
             SqlParameter[] sqlPara =
             {
-                 new SqlParameter("@MovieRented",rentEntity.movierented),
-                new SqlParameter("@MemberId",rentEntity.memberid),
-                new SqlParameter("@RentedId",rentEntity.rentedid),
+                 new SqlParameter("@MovieRented",rentEntity.MovieRented),
+                new SqlParameter("@RentedId",rentEntity.RentedId),
             };
 
             bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlPara);

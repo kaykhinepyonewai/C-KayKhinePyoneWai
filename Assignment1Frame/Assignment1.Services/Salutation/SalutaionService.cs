@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Assignment1.DAO.Salutation;
 using Assignment1.Entities.Salutation;
 
@@ -19,8 +14,6 @@ namespace Assignment1.Services.Salutation
             DataTable dt = salutationDao.GetAll();
             return dt;
         }
-
-
 
         public DataTable Get(int id)
         {

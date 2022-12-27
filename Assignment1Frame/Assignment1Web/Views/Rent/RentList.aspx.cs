@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using Assignment1.Services.Member;
 using Assignment1.Services.Rent;
 
 namespace Assignment1Web.Views.Rent
@@ -24,8 +19,6 @@ namespace Assignment1Web.Views.Rent
             DataTable dt = rentServiece.GetAll();
             gvRent.DataSource = dt;
             gvRent.DataBind();
-
-
         }
 
         protected void lnkbtnNew_Click(object sender, EventArgs e)
@@ -48,8 +41,6 @@ namespace Assignment1Web.Views.Rent
 
 
             RentService rentService = new RentService();
-
-            Response.Write("<script>confirm('Data has Deleted....')</script>");
             bool success = rentService.Delete(Convert.ToInt32(lblRentedId.Text));
 
             if (success)

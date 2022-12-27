@@ -60,6 +60,33 @@ namespace Assignment1Web.Views.Member
         protected global::System.Web.UI.WebControls.RequiredFieldValidator revAddress;
 
         /// <summary>
+        /// textRentedId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textRentedId;
+
+        /// <summary>
+        /// ddlRentedName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlRentedName;
+
+        /// <summary>
+        /// revRetnedName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revRetnedName;
+
+        /// <summary>
         /// txtSalutationId control.
         /// </summary>
         /// <remarks>

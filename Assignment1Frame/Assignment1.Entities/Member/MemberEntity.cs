@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Assignment1.Entities.Member
 {
     public class MemberEntity
     {
       
-        public int memberid { get; set; }
+        public int MemberId { get; set; }
 
-        public string fullname { get; set;}
+        public string FullName { get; set;}
 
-        public string address { get; set; }
+        public string Address { get; set; }
 
-        public int salutationid { get; set; }
+        public int SalutationId { get; set; }
+
+        public int RentedId { get; set; }
 
         public MemberEntity()
         {
@@ -24,10 +21,11 @@ namespace Assignment1.Entities.Member
        
         internal void InitializedObjectValue()
         {
-            this.memberid = 0;
-            this.fullname = string.Empty;
-            this.address = string.Empty;
-            this.salutationid = 0;
+            this.MemberId = 0;
+            this.FullName = string.Empty;
+            this.Address = string.Empty;
+            this.SalutationId = 0;
+            this.RentedId = 0;
          
         }
 

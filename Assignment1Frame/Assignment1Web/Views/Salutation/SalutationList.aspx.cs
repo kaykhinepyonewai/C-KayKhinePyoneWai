@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Assignment1.Services.Salutation;
 
@@ -48,17 +44,14 @@ namespace Assignment1Web.Views.Salutation
            
             SalutaionService salutaionService = new SalutaionService();
 
-            Response.Write("<script>confirm('Data has Deleted....')</script>");
+            
             bool success = salutaionService.Delete(Convert.ToInt32(lblSalutationId.Text));
 
             if(success)
             {
                 BindData();
             }
-            else
-            {
-                //lblMessage.Text = e.ToString();
-            }
+           
         }
 
     }

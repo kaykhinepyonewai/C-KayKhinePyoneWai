@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Assignment1.Entities.Salutation
 {
     public class SalutationEntity
     {
-        public int salutationid { get; set; }
+        public int SalutationId { get; set; }
 
-        public string salutation { get; set; }
+        public string Salutation { get; set; }
 
 
         public SalutationEntity()
@@ -20,8 +15,8 @@ namespace Assignment1.Entities.Salutation
 
         internal void InitializedObjectValue()
         {
-            this.salutationid = 0;
-            this.salutation = string.Empty;
+            this.SalutationId = 0;
+            this.Salutation = string.Empty;
         }
 
     }

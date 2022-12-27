@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Assignment1.Entities.Rent
 {
     public class RentEntity
     {
 
-        public int rentedid { get; set; }
+        public int RentedId { get; set; }
 
-        public string movierented { get; set; }
+        public string MovieRented { get; set; }
 
-        public int memberid { get; set; }
-
-
+       
         public RentEntity()
         {
             InitializedObjectValue();
@@ -23,9 +16,8 @@ namespace Assignment1.Entities.Rent
 
         internal void InitializedObjectValue()
         {
-            this.rentedid = 0;
-            this.movierented = string.Empty;
-            this.memberid = 0;
+            this.RentedId = 0;
+            this.MovieRented = string.Empty;  
         }
     }
 }

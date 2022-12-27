@@ -1,12 +1,6 @@
 ﻿using Assignment1.Services.Member;
-using Assignment1.Services.Salutation;
-using Assignment1Web.Views.Salutation;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Assignment1Web.Views.Member
@@ -44,11 +38,7 @@ namespace Assignment1Web.Views.Member
         protected void gvMember_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             Label lblMemberId = (Label)gvMember.Rows[e.RowIndex].FindControl("lblMemberId");
-
-
             MemberService memberService = new MemberService();
-
-            Response.Write("<script>confirm('Data has Deleted....')</script>");
             bool success = memberService.Delete(Convert.ToInt32(lblMemberId.Text));
 
             if (success)

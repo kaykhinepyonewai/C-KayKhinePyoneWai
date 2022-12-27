@@ -31,6 +31,18 @@
                     </div>
                 </div>
 
+               <div class="row">
+                    <div class="col col-md-4">
+                        <label for="<%= textRentedId.ClientID  %>" Visible="false" class="col-form-label"></label>
+                        <label for="<%= ddlRentedName.ClientID  %>" class="col-form-label">Movie Rented</label>
+                    </div>
+                    <div class="col col-md-8">
+                        <asp:TextBox ID="textRentedId" Visible="false" runat="server" ValidationGroup="namGp" CssClass="form-control"></asp:TextBox>
+                        <asp:DropDownList ID="ddlRentedName"  runat="server" cssClass="col-form col-md-12"></asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="revRetnedName" runat="server" ValidationGroup="namGp" ControlToValidate="ddlRentedName" ErrorMessage="Please Filled Address..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+
                  <div class="row">
                     <div class="col col-md-4">
                         <label for="<%= txtSalutationId.ClientID  %>" Visible="false" class="col-form-label"></label>

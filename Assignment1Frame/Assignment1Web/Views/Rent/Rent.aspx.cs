@@ -1,13 +1,7 @@
 ﻿using Assignment1.Entities.Rent;
-using Assignment1.Services.Member;
 using Assignment1.Services.Rent;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Assignment1Web.Views.Rent
 {
@@ -17,7 +11,6 @@ namespace Assignment1Web.Views.Rent
         {
             if (!IsPostBack)
             {
-                BindMember();
                 if (Request.QueryString["id"] != null)
                 {
                     hdRentId.Value = Request.QueryString["id"].ToString();
@@ -29,15 +22,6 @@ namespace Assignment1Web.Views.Rent
             }
         }
 
-        void BindMember()
-        {
-            RentService rentService = new RentService();
-            DataTable dt = rentService.GetMember();
-            ddlMemberName.DataSource = dt;
-            ddlMemberName.DataValueField = "MemberId";
-            ddlMemberName.DataTextField = "FullName";
-            ddlMemberName.DataBind();
-        }
         void BindData()
         {
             RentService rentService = new RentService();
@@ -45,8 +29,6 @@ namespace Assignment1Web.Views.Rent
             if (dt.Rows.Count > 0)
             {
                 txtRentName.Text = dt.Rows[0]["MovieRented"].ToString();
-                ddlMemberName.DataValueField = dt.Rows[0]["MemberId"].ToString();
-                ddlMemberName.DataTextField = dt.Rows[0]["FullName"].ToString();
             }
         }
 
@@ -61,9 +43,28 @@ namespace Assignment1Web.Views.Rent
             RentEntity rentEntity = CreateData();
             bool success = false;
             if (hdRentId.Value == "0")
+
             {
+                int count = 0;
+                count = rentService.Count(rentEntity);
+                if (count > 0)
+                {
+                    btnSave.Enabled = false;
+                    lblMessage.Text = "Name is Already Exit......";
+                    lblMessage.Visible = true;
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    lblMessage.Visible = true;
+
+
                     success = rentService.Insert(rentEntity);
-                
+
+            }
+                btnSave.Enabled = true;
+                txtRentName.Text = "";
+
             }
             else
             {
@@ -79,9 +80,8 @@ namespace Assignment1Web.Views.Rent
         public RentEntity CreateData()
         {
             RentEntity rentEntity = new RentEntity();
-            rentEntity.rentedid = Convert.ToInt32(hdRentId.Value);
-            rentEntity.movierented = txtRentName.Text;
-            rentEntity.memberid = Convert.ToInt32(ddlMemberName.SelectedValue);
+            rentEntity.RentedId = Convert.ToInt32(hdRentId.Value);
+            rentEntity.MovieRented = txtRentName.Text;
             return rentEntity;
 
         }

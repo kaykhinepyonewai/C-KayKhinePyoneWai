@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assignment1.DAO.Member;
+﻿using System.Data;
 using Assignment1.DAO.Rent;
-using Assignment1.Entities.Member;
 using Assignment1.Entities.Rent;
 
 namespace Assignment1.Services.Rent

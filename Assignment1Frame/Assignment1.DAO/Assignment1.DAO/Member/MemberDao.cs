@@ -1,13 +1,8 @@
 ﻿using Assignment1.DAO.Common;
 using Assignment1.Entities.Member;
-using Assignment1.Entities.Salutation;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment1.DAO.Member
 {
@@ -17,20 +12,16 @@ namespace Assignment1.DAO.Member
 
         private string strSql = String.Empty;
 
-        private DataTable resultDataTable = new DataTable();
-
-        private int existCount;
-
         public DataTable GetAll()
         {
-            strSql = "select * from Member,Salutation WHERE Member.SalutationId=Salutation.SalutationId";
-
+            
+            strSql = "select * from ((Member as m INNER JOIN Rent as r ON m.RentedId = r.RentedId) INNER JOIN Salutation as s ON m.SalutationId=s.SalutationId)";
             return connection.ExecuteDataTable(CommandType.Text, strSql);
         }
 
         public DataTable Get(int id)
         {
-            strSql = "select * from Member,Salutation WHERE Member.MemberId=" + id + " and Member.SalutationId=Salutation.SalutationId";
+            strSql = "select * from Member,Salutation,Rent WHERE Member.MemberId=" + id + " and Member.SalutationId=Salutation.SalutationId and Member.RentedId = Rent.RentedId";
             return connection.ExecuteDataTable(CommandType.Text, strSql);
 
         }
@@ -38,12 +29,13 @@ namespace Assignment1.DAO.Member
         public bool Insert(MemberEntity memberEntity)
         {
            
-            strSql = "INSERT INTO Member(FullName,Address,SalutationId) " + "VALUES (@FullName,@Address,@SalutationId)";
+            strSql = "INSERT INTO Member(FullName,Address,SalutationId,RentedId) " + "VALUES (@FullName,@Address,@SalutationId,@RentedId)";
             SqlParameter[] sqlPara =
             {
-                new SqlParameter("@FullName",memberEntity.fullname),
-                new SqlParameter("@Address",memberEntity.address),
-                new SqlParameter("@SalutationId",memberEntity.salutationid)
+                new SqlParameter("@FullName",memberEntity.FullName),
+                new SqlParameter("@Address",memberEntity.Address),
+                new SqlParameter("@SalutationId",memberEntity.SalutationId),
+                new SqlParameter("@RentedId",memberEntity.RentedId)
 
             };
 
@@ -56,10 +48,10 @@ namespace Assignment1.DAO.Member
             strSql = "UPDATE Member SET FullName=@FullName,Address=@Address,SalutationId=@SalutationId WHERE MemberId=@MemberId";
             SqlParameter[] sqlPara =
             {
-                 new SqlParameter("@FullName",memberEntity.fullname),
-                new SqlParameter("@Address",memberEntity.address),
-                new SqlParameter("@SalutationId",memberEntity.salutationid),
-                new SqlParameter("@MemberId",memberEntity.memberid),
+                 new SqlParameter("@FullName",memberEntity.FullName),
+                new SqlParameter("@Address",memberEntity.Address),
+                new SqlParameter("@SalutationId",memberEntity.SalutationId),
+                new SqlParameter("@MemberId",memberEntity.MemberId),
 
             };
 
@@ -72,7 +64,7 @@ namespace Assignment1.DAO.Member
             strSql = "SELECT COUNT(*) FROM Member WHERE FullName=" + "@FullName";
             SqlParameter[] sqlPara =
            {
-                 new SqlParameter("@FullName",memberEntity.fullname),
+                 new SqlParameter("@FullName",memberEntity.FullName),
             };
 
             int sucess = Convert.ToInt32(connection.ExecuteScalar(CommandType.Text, strSql, sqlPara));
@@ -83,6 +75,13 @@ namespace Assignment1.DAO.Member
         public DataTable GetSalutation()
         {
             strSql = "select * from Salutation";
+
+            return connection.ExecuteDataTable(CommandType.Text, strSql);
+        }
+
+        public DataTable GetRented()
+        {
+            strSql = "select * from Rent";
 
             return connection.ExecuteDataTable(CommandType.Text, strSql);
         }

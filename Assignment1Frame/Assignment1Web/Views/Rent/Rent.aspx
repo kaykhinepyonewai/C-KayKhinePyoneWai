@@ -19,19 +19,6 @@
                         <asp:RequiredFieldValidator ID="revName" runat="server" ValidationGroup="namGp" ControlToValidate="txtRentName" ErrorMessage="Please Filled Name..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
                 </div>
-
-                 <div class="row">
-                    <div class="col col-md-4">
-                        <label for="<%= txtMemberId.ClientID  %>" Visible="false" class="col-form-label"></label>
-                        <label for="<%= ddlMemberName.ClientID  %>" class="col-form-label">Member Name</label>
-                    </div>
-                    <div class="col col-md-8">
-                        <asp:TextBox ID="txtMemberId" Visible="false" runat="server" ValidationGroup="namGp" CssClass="form-control"></asp:TextBox>
-                        <asp:DropDownList ID="ddlMemberName" runat="server" cssClass="col-form col-md-12"></asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="revMember" runat="server" ValidationGroup="namGp" ControlToValidate="ddlMemberName" ErrorMessage="Please Filled Member..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
-                    </div>
-                </div>
-
                 <div class="row buttonAll">
                     <div class="col col-md-4"><asp:Label ID="lblMessage" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label></div>
                     <div class="col col-md-8">

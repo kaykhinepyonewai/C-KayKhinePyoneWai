@@ -1,13 +1,7 @@
-﻿using Assignment1.DAO.Salutation;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Assignment1.Entities.Member;
 using Assignment1.DAO.Member;
-using Assignment1.Entities.Salutation;
+
 
 namespace Assignment1.Services.Member
 {
@@ -44,6 +38,12 @@ namespace Assignment1.Services.Member
         public DataTable GetSalutation()
         {
             DataTable dt = memberDao.GetSalutation();
+            return dt;
+        }
+
+        public DataTable GetRented()
+        {
+            DataTable dt = memberDao.GetRented();
             return dt;
         }
 

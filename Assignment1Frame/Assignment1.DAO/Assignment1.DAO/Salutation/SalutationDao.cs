@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Assignment1.Entities.Salutation;
 using Assignment1.DAO.Common;
 using System.Data;
 using System.Data.SqlClient;
-using System.Runtime.Remoting.Messaging;
+
 
 namespace Assignment1.DAO.Salutation
 {
@@ -16,10 +12,6 @@ namespace Assignment1.DAO.Salutation
         private DBConnection connection = new DBConnection();
 
         private string strSql = String.Empty;
-
-        private DataTable resultDataTable = new DataTable();
-
-        private int existCount;
 
 
         public DataTable GetAll()
@@ -40,7 +32,7 @@ namespace Assignment1.DAO.Salutation
             strSql = "INSERT INTO Salutation(Salutation) " +  "VALUES (@Salutation)";
             SqlParameter[] sqlPara =
             {
-                new SqlParameter("@Salutation",salutationEntity.salutation)
+                new SqlParameter("@Salutation",salutationEntity.Salutation)
             };
 
             bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlPara);
@@ -52,8 +44,8 @@ namespace Assignment1.DAO.Salutation
             strSql = "UPDATE Salutation SET Salutation=@Salutation WHERE SalutationId=@SalutationId";
             SqlParameter[] sqlPara =
             {
-                 new SqlParameter("@Salutation",salutationEntity.salutation),
-                new SqlParameter("@SalutationId",salutationEntity.salutationid),
+                 new SqlParameter("@Salutation",salutationEntity.Salutation),
+                new SqlParameter("@SalutationId",salutationEntity.SalutationId),
                
             };
 
@@ -66,7 +58,7 @@ namespace Assignment1.DAO.Salutation
             strSql = "SELECT COUNT(*) FROM Salutation WHERE Salutation=" + "@Salutation";
             SqlParameter[] sqlPara =
            {
-                 new SqlParameter("@Salutation",salutationEntity.salutation),
+                 new SqlParameter("@Salutation",salutationEntity.Salutation),
             };
 
             int sucess = Convert.ToInt32 (connection.ExecuteScalar(CommandType.Text, strSql, sqlPara)) ;

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Assignment1.Services.Salutation;
 using Assignment1.Entities.Salutation;
 using System.Data;
@@ -24,7 +19,6 @@ namespace Assignment1Web.Views.Salutation
                     btnSave.Text = "Update";
                 }
                 btnSave.Enabled = true;
-                txtSalutationName.Text = "";
             }
         }
 
@@ -37,8 +31,6 @@ namespace Assignment1Web.Views.Salutation
                
                 txtSalutationName.Text = dt.Rows[0]["Salutation"].ToString();
             }
-
-          
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -87,8 +79,8 @@ namespace Assignment1Web.Views.Salutation
         public SalutationEntity CreateData()
         {
             SalutationEntity salutationEntity = new SalutationEntity();
-            salutationEntity.salutationid = Convert.ToInt32(hdSalutationId.Value);
-            salutationEntity.salutation = txtSalutationName.Text;
+            salutationEntity.SalutationId = Convert.ToInt32(hdSalutationId.Value);
+            salutationEntity.Salutation = txtSalutationName.Text;
 
             return salutationEntity;
 
