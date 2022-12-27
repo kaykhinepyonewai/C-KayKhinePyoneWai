@@ -41,8 +41,7 @@ namespace TrainingWeb.Views.Student
             Label lblStudentID = (Label)gvStudent.Rows[e.RowIndex].FindControl("lblStudentID");
 
             StudentService studentService = new StudentService();
-            Response.Write("<script>confirm('Are You Sure You Want To Delete.....')</script>");
-
+    
             bool success = studentService.Delete(Convert.ToInt32(lblStudentID.Text));
 
             if (success)

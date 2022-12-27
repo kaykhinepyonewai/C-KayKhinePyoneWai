@@ -58,7 +58,7 @@ namespace TrainingWeb.Views.Assignment
 
             if (success)
             {
-                Response.Redirect("~/Views/Assignment/AssignmetnList.aspx");
+                Response.Redirect("~/Views/Assignment/AssignmentList.aspx");
             }
         }
 
@@ -82,7 +82,7 @@ namespace TrainingWeb.Views.Assignment
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/Assignment/AssignmetnList.aspx");
+            Response.Redirect("~/Views/Assignment/AssignmentList.aspx");
         }
 
       

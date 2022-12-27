@@ -158,7 +158,7 @@
     <Content Include="style.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Assignment\Assignment.aspx" />
-    <Content Include="Views\Assignment\AssignmetnList.aspx" />
+    <Content Include="Views\Assignment\AssignmentList.aspx" />
     <Content Include="Views\Student\Student.aspx" />
     <Content Include="Views\Student\StudentList.aspx" />
     <Content Include="Web.config" />
@@ -221,12 +221,12 @@
     <Compile Include="Views\Assignment\Assignment.aspx.designer.cs">
       <DependentUpon>Assignment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Assignment\AssignmetnList.aspx.cs">
-      <DependentUpon>AssignmetnList.aspx</DependentUpon>
+    <Compile Include="Views\Assignment\AssignmentList.aspx.cs">
+      <DependentUpon>AssignmentList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Assignment\AssignmetnList.aspx.designer.cs">
-      <DependentUpon>AssignmetnList.aspx</DependentUpon>
+    <Compile Include="Views\Assignment\AssignmentList.aspx.designer.cs">
+      <DependentUpon>AssignmentList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Student\Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>
