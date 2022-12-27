@@ -68,7 +68,7 @@ namespace Assignment1Web.Views.Salutation
             else
             {
                 int count = 0;
-                count = salutaionService.Count(salutationEntity);
+                count = salutaionService.CountUpdate(salutationEntity);
                 if (count > 0)
                 {
                     btnSave.Enabled = false;

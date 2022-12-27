@@ -69,7 +69,7 @@ namespace Assignment1Web.Views.Rent
             else
             {
                 int count = 0;
-                count = rentService.Count(rentEntity);
+                count = rentService.CountUpdate(rentEntity);
                 if (count > 0)
                 {
                     btnSave.Enabled = false;

@@ -24,6 +24,10 @@ namespace Assignment1.Services.Rent
         {
             return rentDao.Count(rentEntity);
         }
+        public int CountUpdate(RentEntity rentEntity)
+        {
+            return rentDao.CountUpdate(rentEntity);
+        }
 
         public bool Insert(RentEntity rentEntity)
         {

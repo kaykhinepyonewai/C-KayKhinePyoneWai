@@ -36,6 +36,11 @@ namespace Assignment1.Services.Salutation
             return salutationDao.Count(salutationEntity);
         }
 
+        public int CountUpdate(SalutationEntity salutationEntity)
+        {
+            return salutationDao.CountUpdate(salutationEntity);
+        }
+
 
         public bool Delete(int id)
         {

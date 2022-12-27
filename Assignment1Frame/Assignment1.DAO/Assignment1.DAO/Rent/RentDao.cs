@@ -42,6 +42,20 @@ namespace Assignment1.DAO.Rent
             return sucess;
         }
 
+        public int CountUpdate(RentEntity rentEntity)
+        {
+            strSql = "SELECT COUNT(*) FROM Rent WHERE MovieRented=" + "@MovieRented and RentedId!=" +"@RentedId";
+            SqlParameter[] sqlPara =
+           {
+                 new SqlParameter("@MovieRented",rentEntity.MovieRented),
+                 new SqlParameter("@RentedId",rentEntity.RentedId),
+            };
+
+            int sucess = Convert.ToInt32(connection.ExecuteScalar(CommandType.Text, strSql, sqlPara));
+
+            return sucess;
+        }
+
         public bool Insert(RentEntity rentEntity)
         {
             

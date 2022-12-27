@@ -66,6 +66,20 @@ namespace Assignment1.DAO.Salutation
             return sucess;
         }
 
+        public int CountUpdate(SalutationEntity salutationEntity)
+        {
+            strSql = "SELECT COUNT(*) FROM Salutation WHERE Salutation=" + "@Salutation and SalutationId!=" + "@SalutationId";
+            SqlParameter[] sqlPara =
+           {
+                 new SqlParameter("@Salutation",salutationEntity.Salutation),
+                 new SqlParameter("@SalutationId",salutationEntity.SalutationId),
+            };
+
+            int sucess = Convert.ToInt32(connection.ExecuteScalar(CommandType.Text, strSql, sqlPara));
+
+            return sucess;
+        }
+
 
         public bool Delete(int id)
         {

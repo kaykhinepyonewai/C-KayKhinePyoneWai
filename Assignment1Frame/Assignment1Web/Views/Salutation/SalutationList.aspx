@@ -9,7 +9,7 @@
           <div class="row mtt mbb">
         <div clas="col-md-12 mb-3 text-end ">
             <asp:LinkButton ID="lnkbtnNew" runat="server" cssClass="btn btn-info" OnClick="lnkbtnNew_Click">
-                New Member
+                New Salutation
             </asp:LinkButton>
         </div>
     </div>
@@ -19,8 +19,6 @@
         <div class="row">
             
             <div class="mbb col-12 col-sm-12">
-                <%--<asp:LinkButton ID="lnkbtnNew" CssClass="btn mbb btn-info" runat="server" OnClick="lnkbtnNew_Click">New Salutation</asp:LinkButton>--%>
-              
                 <asp:GridView ID="gvSalutation" CssClass="table table-bordered table-striped mt-3" AutoGenerateColumns="False" runat="server" OnRowCommand="gvSalutation_RowCommand" OnRowDeleting="gvSalutation_RowDeleting">
                     <Columns>
                         <asp:TemplateField HeaderText="Id">

@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
     <div class="container mtt">
         <h1 class="title">Member Entry From</h1>
         <div class="row">
@@ -11,18 +10,15 @@
            <div class="col-6 col-md-6 col-sm-6">
                 <div class="row">
                     <div class="col col-md-4">
-                        
                         <label for="<%= txtMemberName.ClientID  %>" class="col-form-label">Member Full Name</label>
                     </div>
                     <div class="col col-md-8">
                         <asp:TextBox ID="txtMemberName" runat="server" ValidationGroup="namGp" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="revName" runat="server" ValidationGroup="namGp" ControlToValidate="txtMemberName" ErrorMessage="Please Filled Name..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
-                </div>
-
+                </div> 
                 <div class="row">
                     <div class="col col-md-4">
-                        
                         <label for="<%= txtAddressName.ClientID  %>" class="col-form-label">Address</label>
                     </div>
                     <div class="col col-md-8">
@@ -30,7 +26,6 @@
                         <asp:RequiredFieldValidator ID="revAddress" runat="server" ValidationGroup="namGp" ControlToValidate="txtAddressName" ErrorMessage="Please Filled Address..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
                 </div>
-
                <div class="row">
                     <div class="col col-md-4">
                         <label for="<%= textRentedId.ClientID  %>" Visible="false" class="col-form-label"></label>
@@ -42,7 +37,6 @@
                         <asp:RequiredFieldValidator ID="revRetnedName" runat="server" ValidationGroup="namGp" ControlToValidate="ddlRentedName" ErrorMessage="Please Filled Address..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
                 </div>
-
                  <div class="row">
                     <div class="col col-md-4">
                         <label for="<%= txtSalutationId.ClientID  %>" Visible="false" class="col-form-label"></label>
@@ -54,7 +48,6 @@
                         <asp:RequiredFieldValidator ID="revSalutation" runat="server" ValidationGroup="namGp" ControlToValidate="ddlSalutationName" ErrorMessage="Please Filled Address..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
                 </div>
-
                 <div class="row buttonAll">
                     <div class="col col-md-4"><asp:Label ID="lblMessage" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label></div>
                     <div class="col col-md-8">
@@ -62,9 +55,7 @@
                         <asp:Button ID="btnCancel" CssClass="btn btn-primary" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
                     </div>
                 </div>
-
-            </div>
-           
+            </div> 
         </div>
     </div>
 
