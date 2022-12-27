@@ -67,7 +67,22 @@ namespace Assignment1Web.Views.Salutation
             }
             else
             {
-                success = salutaionService.Update(salutationEntity);
+                int count = 0;
+                count = salutaionService.Count(salutationEntity);
+                if (count > 0)
+                {
+                    btnSave.Enabled = false;
+                    lblMessage.Text = "Please Update Name, Inputing Name is Already Exit......";
+                    lblMessage.Visible = true;
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    lblMessage.Visible = true;
+                    success = salutaionService.Update(salutationEntity);
+                }
+
+                btnSave.Enabled = true;
             }
 
             if (success)

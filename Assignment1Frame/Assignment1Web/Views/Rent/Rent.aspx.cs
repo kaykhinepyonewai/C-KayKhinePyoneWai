@@ -61,14 +61,30 @@ namespace Assignment1Web.Views.Rent
 
                     success = rentService.Insert(rentEntity);
 
-            }
+                }
                 btnSave.Enabled = true;
                 txtRentName.Text = "";
 
             }
             else
             {
-                success = rentService.Update(rentEntity);
+                int count = 0;
+                count = rentService.Count(rentEntity);
+                if (count > 0)
+                {
+                    btnSave.Enabled = false;
+                    lblMessage.Text = "Please Update Name, Inputing Name is Already Exit......";
+                    lblMessage.Visible = true;
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    lblMessage.Visible = true;
+
+
+                    success = rentService.Update(rentEntity);
+                }
+                btnSave.Enabled = true;
             }
 
             if (success)

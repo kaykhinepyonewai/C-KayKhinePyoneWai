@@ -6,15 +6,20 @@
     <div class="container mtt salutationList">
         <h1 class="title mb-5">Salution List From</h1>
 
+          <div class="row mtt mbb">
+        <div clas="col-md-12 mb-3 text-end ">
+            <asp:LinkButton ID="lnkbtnNew" runat="server" cssClass="btn btn-info" OnClick="lnkbtnNew_Click">
+                New Member
+            </asp:LinkButton>
+        </div>
+    </div>
+
+
+
         <div class="row">
-            <div class="col-2 col-sm-2">
-                
-            </div>
-            <div class="col-4 col-sm-4">
-                <img class="img" src="../../img/img1.png" />
-            </div>
-            <div class="mbb col-6 col-sm-6">
-                <asp:LinkButton ID="lnkbtnNew" CssClass="btn mbb btn-info" runat="server" OnClick="lnkbtnNew_Click">New Salutation</asp:LinkButton>
+            
+            <div class="mbb col-12 col-sm-12">
+                <%--<asp:LinkButton ID="lnkbtnNew" CssClass="btn mbb btn-info" runat="server" OnClick="lnkbtnNew_Click">New Salutation</asp:LinkButton>--%>
               
                 <asp:GridView ID="gvSalutation" CssClass="table table-bordered table-striped mt-3" AutoGenerateColumns="False" runat="server" OnRowCommand="gvSalutation_RowCommand" OnRowDeleting="gvSalutation_RowDeleting">
                     <Columns>

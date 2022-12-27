@@ -45,13 +45,14 @@ namespace Assignment1.DAO.Member
 
         public bool Update(MemberEntity memberEntity)
         {
-            strSql = "UPDATE Member SET FullName=@FullName,Address=@Address,SalutationId=@SalutationId WHERE MemberId=@MemberId";
+            strSql = "UPDATE Member SET FullName=@FullName,Address=@Address,SalutationId=@SalutationId,RentedId=@RentedId WHERE MemberId=@MemberId";
             SqlParameter[] sqlPara =
             {
                  new SqlParameter("@FullName",memberEntity.FullName),
                 new SqlParameter("@Address",memberEntity.Address),
                 new SqlParameter("@SalutationId",memberEntity.SalutationId),
                 new SqlParameter("@MemberId",memberEntity.MemberId),
+                new SqlParameter("@RentedId",memberEntity.RentedId),
 
             };
 

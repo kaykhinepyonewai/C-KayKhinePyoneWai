@@ -38,7 +38,7 @@
                     </div>
                     <div class="col col-md-8">
                         <asp:TextBox ID="textRentedId" Visible="false" runat="server" ValidationGroup="namGp" CssClass="form-control"></asp:TextBox>
-                        <asp:DropDownList ID="ddlRentedName"  runat="server" cssClass="col-form col-md-12"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlRentedName"  runat="server" cssClass="form-control"></asp:DropDownList>
                         <asp:RequiredFieldValidator ID="revRetnedName" runat="server" ValidationGroup="namGp" ControlToValidate="ddlRentedName" ErrorMessage="Please Filled Address..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col col-md-8">
                         <asp:TextBox ID="txtSalutationId" Visible="false" runat="server" ValidationGroup="namGp" CssClass="form-control"></asp:TextBox>
-                        <asp:DropDownList ID="ddlSalutationName"  runat="server" cssClass="col-form col-md-12"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlSalutationName"  runat="server" cssClass="form-control"></asp:DropDownList>
                         <asp:RequiredFieldValidator ID="revSalutation" runat="server" ValidationGroup="namGp" ControlToValidate="ddlSalutationName" ErrorMessage="Please Filled Address..." ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     </div>
                 </div>
@@ -58,8 +58,8 @@
                 <div class="row buttonAll">
                     <div class="col col-md-4"><asp:Label ID="lblMessage" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label></div>
                     <div class="col col-md-8">
-                        <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" ValidationGroup="namGp" />
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                        <asp:Button ID="btnSave" CssClass="btn btn-info" runat="server" Text="Save" OnClick="btnSave_Click" ValidationGroup="namGp" />
+                        <asp:Button ID="btnCancel" CssClass="btn btn-primary" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
                     </div>
                 </div>
 
