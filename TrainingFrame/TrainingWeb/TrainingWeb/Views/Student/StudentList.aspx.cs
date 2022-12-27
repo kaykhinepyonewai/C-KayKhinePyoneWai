@@ -1,9 +1,5 @@
 ﻿using Training.Services.Student;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
@@ -45,7 +41,7 @@ namespace TrainingWeb.Views.Student
             Label lblStudentID = (Label)gvStudent.Rows[e.RowIndex].FindControl("lblStudentID");
 
             StudentService studentService = new StudentService();
-            Response.Write("<script>confirm('Data has Deleted.....')</script>");
+            Response.Write("<script>confirm('Are You Sure You Want To Delete.....')</script>");
 
             bool success = studentService.Delete(Convert.ToInt32(lblStudentID.Text));
 
@@ -54,5 +50,7 @@ namespace TrainingWeb.Views.Student
                 BindData();
             }
         }
+
+       
     }
 }

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Training.Services.Assignment;
-using Training.Services.Student;
-using TrainingWeb.Views.Student;
+
 
 namespace TrainingWeb.Views.Assignment
 {
@@ -47,7 +42,7 @@ namespace TrainingWeb.Views.Assignment
 
             AssignmentService assignmentService = new AssignmentService();
 
-            Response.Write("<script>confirm('Data has Deleted....')</script>");
+            Response.Write("<script>confirm('Are You Sure You Want To Delete ....')</script>");
             bool success = assignmentService.Delete(Convert.ToInt32(lblAssignmentId.Text));
 
             if(success)

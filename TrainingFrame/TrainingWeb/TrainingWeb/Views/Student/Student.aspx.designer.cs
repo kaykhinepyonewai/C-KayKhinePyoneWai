@@ -33,6 +33,15 @@ namespace TrainingWeb.Views.Student
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
+        /// revName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revName;
+
+        /// <summary>
         /// txtAddress control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace TrainingWeb.Views.Student
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
+
+        /// <summary>
+        /// revAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revAddress;
 
         /// <summary>
         /// txtCourseName control.
@@ -51,6 +69,15 @@ namespace TrainingWeb.Views.Student
         protected global::System.Web.UI.WebControls.TextBox txtCourseName;
 
         /// <summary>
+        /// revCourseName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCourseName;
+
+        /// <summary>
         /// txtCourseFee control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace TrainingWeb.Views.Student
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCourseFee;
+
+        /// <summary>
+        /// revCourseFee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCourseFee;
 
         /// <summary>
         /// txtJoiningDate control.
@@ -69,13 +105,22 @@ namespace TrainingWeb.Views.Student
         protected global::System.Web.UI.WebControls.TextBox txtJoiningDate;
 
         /// <summary>
+        /// revJJDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revJJDate;
+
+        /// <summary>
         /// revDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDate;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDate;
 
         /// <summary>
         /// btnSave control.

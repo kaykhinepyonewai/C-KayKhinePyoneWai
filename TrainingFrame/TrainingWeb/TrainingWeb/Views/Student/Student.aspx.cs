@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Training.Entities.Student;
 using Training.Services.Student;
 
@@ -73,15 +68,15 @@ namespace TrainingWeb.Views.Student
         {
           
             StudentEntity studentEntity = new StudentEntity();
-            studentEntity.studentid = Convert.ToInt32(hdStudentId.Value);
-            studentEntity.name = txtName.Text;
-            studentEntity.address = txtAddress.Text;
-            studentEntity.coursename = txtCourseName.Text;
-            studentEntity.coursefee = txtCourseFee.Text == "" ? 0 : Convert.ToInt32(txtCourseFee.Text);
+            studentEntity.StudentId = Convert.ToInt32(hdStudentId.Value);
+            studentEntity.Name = txtName.Text;
+            studentEntity.Address = txtAddress.Text;
+            studentEntity.CourseName = txtCourseName.Text;
+            studentEntity.CourseFee = txtCourseFee.Text == "" ? 0 : Convert.ToInt32(txtCourseFee.Text);
 
             string[] date = txtJoiningDate.Text.Split('/');
 
-            studentEntity.joningdate = Convert.ToDateTime(date[2] + "-" + date[1] + "-" + date[0]);
+            studentEntity.JoningDate = Convert.ToDateTime(date[2] + "-" + date[1] + "-" + date[0]);
 
             return studentEntity;
 

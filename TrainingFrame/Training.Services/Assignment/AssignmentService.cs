@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Training.DAO.Assignment;
-using Training.DAO.Student;
 using Training.Entities.Assignment;
 
 namespace Training.Services.Assignment

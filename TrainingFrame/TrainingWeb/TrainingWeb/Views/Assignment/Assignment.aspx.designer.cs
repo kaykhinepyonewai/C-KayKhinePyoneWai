@@ -33,6 +33,15 @@ namespace TrainingWeb.Views.Assignment
         protected global::System.Web.UI.WebControls.TextBox txtStudentName;
 
         /// <summary>
+        /// revStudentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revStudentName;
+
+        /// <summary>
         /// txtTeacherName control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace TrainingWeb.Views.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTeacherName;
+
+        /// <summary>
+        /// revTeacherName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revTeacherName;
 
         /// <summary>
         /// txtAssignmentName control.
@@ -51,6 +69,15 @@ namespace TrainingWeb.Views.Assignment
         protected global::System.Web.UI.WebControls.TextBox txtAssignmentName;
 
         /// <summary>
+        /// revAssignment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revAssignment;
+
+        /// <summary>
         /// txtClassName control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace TrainingWeb.Views.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtClassName;
+
+        /// <summary>
+        /// revClassName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revClassName;
 
         /// <summary>
         /// txtRemark control.
@@ -69,6 +105,15 @@ namespace TrainingWeb.Views.Assignment
         protected global::System.Web.UI.WebControls.TextBox txtRemark;
 
         /// <summary>
+        /// revtRemark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revtRemark;
+
+        /// <summary>
         /// txtFinishedDate control.
         /// </summary>
         /// <remarks>
@@ -76,6 +121,15 @@ namespace TrainingWeb.Views.Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFinishedDate;
+
+        /// <summary>
+        /// revDate1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDate1;
 
         /// <summary>
         /// revDate control.

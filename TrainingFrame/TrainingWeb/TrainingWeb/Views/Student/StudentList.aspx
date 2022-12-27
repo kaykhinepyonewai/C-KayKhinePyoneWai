@@ -13,12 +13,13 @@
         <Columns>
             <asp:TemplateField HeaderText="Id">
                 <ItemTemplate>
-                   <asp:Label ID="lblStudentID" runat="server" Text='<%# Eval("StudentID") %>' ></asp:Label>
+                   <asp:Label ID="lblStudentID" Visible="false" runat="server" Text='<%# Eval("StudentID") %>' ></asp:Label>
+                     <asp:Label ID="lblStudentNo" runat="server" Text='<%#Container.DataItemIndex+1 %>' ></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Student Name">
                 <ItemTemplate>
-                   <asp:Label ID="lblName" runat="server" Text='<%# Eval("Name") %>' ></asp:Label>
+                   <asp:Label ID="lblName" runat="server"  Text='<%# Eval("Name") %>' ></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Address">

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Training.DAO.Common;
 using Training.Entities.Student;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Training.DAO.Student
 {
@@ -17,11 +12,6 @@ namespace Training.DAO.Student
 
         private string strSql = String.Empty;
 
-        private DataTable resultDataTable = new DataTable();
-
-        private int existCount;
-
-       
         public DataTable GetAll()
         {
             strSql = "SELECT * FROM Students ";
@@ -35,11 +25,11 @@ namespace Training.DAO.Student
 
             SqlParameter[] sqlParam =
             {
-                new SqlParameter("@Name",studentEntity.name),
-                new SqlParameter("@Address", studentEntity.address),
-                new SqlParameter("@CourseName",studentEntity.coursename),
-                new SqlParameter("@CourseFee",studentEntity.coursefee),
-                new SqlParameter("@JoiningDate",studentEntity.joningdate)
+                new SqlParameter("@Name",studentEntity.Name),
+                new SqlParameter("@Address", studentEntity.Address),
+                new SqlParameter("@CourseName",studentEntity.CourseName),
+                new SqlParameter("@CourseFee",studentEntity.CourseFee),
+                new SqlParameter("@JoiningDate",studentEntity.JoningDate)
 
             };
              bool success = connection.ExecuteNonQuery(CommandType.Text,strSql, sqlParam);
@@ -52,12 +42,12 @@ namespace Training.DAO.Student
 
             SqlParameter[] sqlParam =
                  {
-                    new SqlParameter("@StudentId",studentEntity.studentid),
-                    new SqlParameter("@Name",studentEntity.name),
-                    new SqlParameter("@Address",studentEntity.address),
-                    new SqlParameter("@CourseName",studentEntity.coursename),
-                    new SqlParameter("@CourseFee",studentEntity.coursefee),
-                    new SqlParameter("@JoiningDate",studentEntity.joningdate)
+                    new SqlParameter("@StudentId",studentEntity.StudentId),
+                    new SqlParameter("@Name",studentEntity.Name),
+                    new SqlParameter("@Address",studentEntity.Address),
+                    new SqlParameter("@CourseName",studentEntity.CourseName),
+                    new SqlParameter("@CourseFee",studentEntity.CourseFee),
+                    new SqlParameter("@JoiningDate",studentEntity.JoningDate)
             };
 
             bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlParam);

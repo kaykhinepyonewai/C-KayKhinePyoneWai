@@ -14,7 +14,8 @@
         <Columns>
             <asp:TemplateField HeaderText="Id">
                 <ItemTemplate>
-                   <asp:Label ID="lblAssignmentId" runat="server" Text='<%# Eval("AssignmentId") %>' ></asp:Label>
+                   <asp:Label ID="lblAssignmentId" Visible="false" runat="server" Text='<%# Eval("AssignmentId") %>' ></asp:Label>
+                    <asp:Label ID="lblAssignmentNo" runat="server" Text='<%#Container.DataItemIndex+1 %>' ></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Student Name">

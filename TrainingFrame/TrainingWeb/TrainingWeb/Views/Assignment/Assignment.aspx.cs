@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Xml.Linq;
 using Training.Entities.Assignment;
-using Training.Entities.Student;
 using Training.Services.Assignment;
-using Training.Services.Student;
 
 namespace TrainingWeb.Views.Assignment
 {
@@ -73,16 +65,16 @@ namespace TrainingWeb.Views.Assignment
         public AssignmentEntity CreateData()
         {
             AssignmentEntity assignmentEntity = new AssignmentEntity();
-            assignmentEntity.assignmentid = Convert.ToInt32(hdAssignmentId.Value);
-            assignmentEntity.studentname = txtStudentName.Text;
-            assignmentEntity.teachername = txtTeacherName.Text;
-            assignmentEntity.assignmentname = txtAssignmentName.Text;
-            assignmentEntity.classname = txtClassName.Text;
+            assignmentEntity.AssignmentId = Convert.ToInt32(hdAssignmentId.Value);
+            assignmentEntity.StudentName = txtStudentName.Text;
+            assignmentEntity.TeacherName = txtTeacherName.Text;
+            assignmentEntity.AssignmentName = txtAssignmentName.Text;
+            assignmentEntity.ClassName = txtClassName.Text;
 
-            assignmentEntity.remark = txtRemark.Text;
+            assignmentEntity.Remark = txtRemark.Text;
 
             string[] date = txtFinishedDate.Text.Split('/');
-            assignmentEntity.finisheddate = Convert.ToDateTime(date[2] + "-" + date[1] + "-" + date[0]);
+            assignmentEntity.FinishedDate = Convert.ToDateTime(date[2] + "-" + date[1] + "-" + date[0]);
 
             return assignmentEntity;
 

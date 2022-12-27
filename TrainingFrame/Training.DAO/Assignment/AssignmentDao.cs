@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Training.DAO.Common;
 using Training.Entities.Assignment;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Training.Entities.Student;
-using System.Windows.Markup;
 
 namespace Training.DAO.Assignment
 {
@@ -17,11 +11,6 @@ namespace Training.DAO.Assignment
         private DbConnection connection = new DbConnection();
 
         private string strSql = String.Empty;
-
-        private DataTable resultDataTable = new DataTable();
-
-        private int existCount;
-
 
         public DataTable GetAll()
         {
@@ -42,12 +31,12 @@ namespace Training.DAO.Assignment
 
             SqlParameter[] sqlParam =
             {
-                new SqlParameter("@StudentName",assignmentEntity.studentname),
-                new SqlParameter("@TeacherName",assignmentEntity.teachername),
-                new SqlParameter("@AssignmentName",assignmentEntity.assignmentname),
-                new SqlParameter("@ClassName",assignmentEntity.classname),
-                new SqlParameter("@Remark",assignmentEntity.remark),
-                new SqlParameter("@FinishedDate",assignmentEntity.finisheddate)
+                new SqlParameter("@StudentName",assignmentEntity.StudentName),
+                new SqlParameter("@TeacherName",assignmentEntity.TeacherName),
+                new SqlParameter("@AssignmentName",assignmentEntity.AssignmentName),
+                new SqlParameter("@ClassName",assignmentEntity.ClassName),
+                new SqlParameter("@Remark",assignmentEntity.Remark),
+                new SqlParameter("@FinishedDate",assignmentEntity.FinishedDate)
             };
 
             bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlParam);
@@ -60,13 +49,13 @@ namespace Training.DAO.Assignment
 
             SqlParameter[] sqlParam =
             {
-                new SqlParameter("@AssignmentId",assignmentEntity.assignmentid),
-                new SqlParameter("@StudentName",assignmentEntity.studentname),
-                new SqlParameter("@TeacherName",assignmentEntity.teachername),
-                new SqlParameter("@AssignmentName",assignmentEntity.assignmentname),
-                new SqlParameter("@ClassName",assignmentEntity.classname),
-                new SqlParameter("@Remark",assignmentEntity.remark),
-                new SqlParameter("@FinishedDate",assignmentEntity.finisheddate)
+                new SqlParameter("@AssignmentId",assignmentEntity.AssignmentId),
+                new SqlParameter("@StudentName",assignmentEntity.StudentName),
+                new SqlParameter("@TeacherName",assignmentEntity.TeacherName),
+                new SqlParameter("@AssignmentName",assignmentEntity.AssignmentName),
+                new SqlParameter("@ClassName",assignmentEntity.ClassName),
+                new SqlParameter("@Remark",assignmentEntity.Remark),
+                new SqlParameter("@FinishedDate",assignmentEntity.FinishedDate)
             };
 
             bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlParam);

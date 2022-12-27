@@ -1,27 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Training.Entities.Assignment
 {
     public class AssignmentEntity
     {
         
-        public int assignmentid { get; set; }
+        public int AssignmentId { get; set; }
 
-        public string studentname { get; set; }
+        public string StudentName { get; set; }
 
-        public string teachername { get; set; }
+        public string TeacherName { get; set; }
 
-        public string assignmentname { get; set; }
+        public string AssignmentName { get; set; }
 
-        public string classname { get; set; }
+        public string ClassName { get; set; }
 
-        public string remark { get; set; }
+        public string Remark { get; set; }
 
-        public DateTime finisheddate { get; set; }
+        public DateTime FinishedDate { get; set; }
 
         public AssignmentEntity()
         {
@@ -31,13 +27,13 @@ namespace Training.Entities.Assignment
         internal void InitializedObjectValue()
         {
            
-            this.assignmentid = 0;
-            this.studentname = string.Empty;
-            this.teachername = string.Empty;
-            this.assignmentname = string.Empty;
-            this.classname = string.Empty;
-            this.remark = string.Empty;
-            this.finisheddate = DateTime.Now;
+            this.AssignmentId = 0;
+            this.StudentName = string.Empty;
+            this.TeacherName = string.Empty;
+            this.AssignmentName = string.Empty;
+            this.ClassName = string.Empty;
+            this.Remark = string.Empty;
+            this.FinishedDate = DateTime.Now;
 
         }
 
