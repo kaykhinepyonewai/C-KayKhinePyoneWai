@@ -10,10 +10,10 @@ namespace TrainingWeb.Views.Assignment
     {
         protected void Page_Load(object sender, EventArgs e)
        {
-            BilndData();
+            BindData();
         }
 
-        void BilndData()
+        void BindData()
         {
             AssignmentService assignmentService = new AssignmentService();
             DataTable dt = assignmentService.GetAll();
@@ -41,13 +41,11 @@ namespace TrainingWeb.Views.Assignment
             Label lblAssignmentId = (Label)gvAssignment.Rows[e.RowIndex].FindControl("lblAssignmentId");
 
             AssignmentService assignmentService = new AssignmentService();
-
-            Response.Write("<script>confirm('Are You Sure You Want To Delete ....')</script>");
             bool success = assignmentService.Delete(Convert.ToInt32(lblAssignmentId.Text));
 
             if(success)
             {
-                BilndData();
+                BindData();
             }
         }
     }

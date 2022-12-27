@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AssignmetnList.aspx.cs" Inherits="TrainingWeb.Views.Assignment.AssignmetnList" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AssignmentList.aspx.cs" Inherits="TrainingWeb.Views.Assignment.AssignmetnList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <h1 class="title" style="text-align:center">Student Assignment List From</h1>
