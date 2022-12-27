@@ -54,7 +54,7 @@
                    <asp:LinkButton ID="lnkbtnEdit" runat="server" CssClass="btn btn-warning btn-sm" CommandName="Edit" CommandArgument='<%# Eval("AssignmentId") %>'>
                        Edit
                    </asp:LinkButton>
-                     <asp:LinkButton ID="lnkbtnDelete" runat="server"  CssClass="btn btn-info btn-sm" CommandName="Delete" CommandArgument='<%# Eval("AssignmentId") %>'>
+                     <asp:LinkButton ID="lnkbtnDelete" runat="server"  CssClass="btn btn-info btn-sm" CommandName="Delete" onClientClick="return fnConfirmDelete();" CommandArgument='<%# Eval("AssignmentId") %>'>
                        Delete
                    </asp:LinkButton>
                 </ItemTemplate>
@@ -62,4 +62,9 @@
         </Columns>
     </asp:GridView>
 
+     <script language="javascript" type="text/javascript">
+         function fnConfirmDelete() {
+             return confirm("Are you sure you want to delete this?");
+         }
+     </script>
   </asp:Content>
