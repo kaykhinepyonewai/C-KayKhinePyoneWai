@@ -1,0 +1,127 @@
+<div>
+	<table class="table table-bordered table-striped mt-3" cellspacing="0" rules="all" border="1" id="MainContent_gvMember" style="border-collapse:collapse;">
+		<tr style="background-color:#FFFFFF;">
+			<th scope="col" style="background-color:#df5015;">Id</th><th scope="col" style="background-color:#df5015;">FullName</th><th scope="col" style="background-color:#df5015;">Address</th><th scope="col" style="background-color:#df5015;">MovieRented</th><th scope="col" style="background-color:#df5015;">Salutation</th><th scope="col" style="background-color:#df5015;">Action</th>
+		</tr><tr>
+			<td>
+                                
+                                <span id="MainContent_gvMember_lblMemberNo_0">1</span>
+                                </td><td>
+                                <span id="MainContent_gvMember_lblFullName_0">Sandy</span>
+                            </td><td>
+                                <span id="MainContent_gvMember_lblAddress_0">First Street Plot No 4</span>
+                            </td><td>
+                               
+                        <span id="MainContent_gvMember_lblMovieRented_0">Clash of the Titans</span>
+                                
+                             </td><td>
+                               
+                 <span id="MainContent_gvMember_lblSalutation_0">Mr</span>
+                                
+                             </td><td>
+                                <a id="MainContent_gvMember_lnkbtnEdit_0" class="btn btn-success" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl02$lnkbtnEdit&#39;,&#39;&#39;)">Edit</a>
+                                <a onclick="return fnConfirmDelete();" id="MainContent_gvMember_lnkbtnDelete_0" class="btn btn-info" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl02$lnkbtnDelete&#39;,&#39;&#39;)">Delete</a>
+                            </td>
+		</tr><tr>
+			<td>
+                                
+                                <span id="MainContent_gvMember_lblMemberNo_1">2</span>
+                                </td><td>
+                                <span id="MainContent_gvMember_lblFullName_1">Sandy</span>
+                            </td><td>
+                                <span id="MainContent_gvMember_lblAddress_1">First Street Plot No 4</span>
+                            </td><td>
+                               
+                        <span id="MainContent_gvMember_lblMovieRented_1">Clash of the Titans</span>
+                                
+                             </td><td>
+                               
+                 <span id="MainContent_gvMember_lblSalutation_1">Ms</span>
+                                
+                             </td><td>
+                                <a id="MainContent_gvMember_lnkbtnEdit_1" class="btn btn-success" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl03$lnkbtnEdit&#39;,&#39;&#39;)">Edit</a>
+                                <a onclick="return fnConfirmDelete();" id="MainContent_gvMember_lnkbtnDelete_1" class="btn btn-info" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl03$lnkbtnDelete&#39;,&#39;&#39;)">Delete</a>
+                            </td>
+		</tr><tr>
+			<td>
+                                
+                                <span id="MainContent_gvMember_lblMemberNo_2">3</span>
+                                </td><td>
+                                <span id="MainContent_gvMember_lblFullName_2">John</span>
+                            </td><td>
+                                <span id="MainContent_gvMember_lblAddress_2">Second Street Plot No5</span>
+                            </td><td>
+                               
+                        <span id="MainContent_gvMember_lblMovieRented_2">Forgetting Sarah Marshal</span>
+                                
+                             </td><td>
+                               
+                 <span id="MainContent_gvMember_lblSalutation_2">Mr</span>
+                                
+                             </td><td>
+                                <a id="MainContent_gvMember_lnkbtnEdit_2" class="btn btn-success" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl04$lnkbtnEdit&#39;,&#39;&#39;)">Edit</a>
+                                <a onclick="return fnConfirmDelete();" id="MainContent_gvMember_lnkbtnDelete_2" class="btn btn-info" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl04$lnkbtnDelete&#39;,&#39;&#39;)">Delete</a>
+                            </td>
+		</tr><tr>
+			<td>
+                                
+                                <span id="MainContent_gvMember_lblMemberNo_3">4</span>
+                                </td><td>
+                                <span id="MainContent_gvMember_lblFullName_3">John</span>
+                            </td><td>
+                                <span id="MainContent_gvMember_lblAddress_3">Second Street Plot No5</span>
+                            </td><td>
+                               
+                        <span id="MainContent_gvMember_lblMovieRented_3">Forgetting Sarah Marshal</span>
+                                
+                             </td><td>
+                               
+                 <span id="MainContent_gvMember_lblSalutation_3">Mr</span>
+                                
+                             </td><td>
+                                <a id="MainContent_gvMember_lnkbtnEdit_3" class="btn btn-success" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl05$lnkbtnEdit&#39;,&#39;&#39;)">Edit</a>
+                                <a onclick="return fnConfirmDelete();" id="MainContent_gvMember_lnkbtnDelete_3" class="btn btn-info" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl05$lnkbtnDelete&#39;,&#39;&#39;)">Delete</a>
+                            </td>
+		</tr><tr>
+			<td>
+                                
+                                <span id="MainContent_gvMember_lblMemberNo_4">5</span>
+                                </td><td>
+                                <span id="MainContent_gvMember_lblFullName_4">Jonet Jones</span>
+                            </td><td>
+                                <span id="MainContent_gvMember_lblAddress_4">Second Street Plot No7</span>
+                            </td><td>
+                               
+                        <span id="MainContent_gvMember_lblMovieRented_4">Clash of the Titans</span>
+                                
+                             </td><td>
+                               
+                 <span id="MainContent_gvMember_lblSalutation_4">Mr</span>
+                                
+                             </td><td>
+                                <a id="MainContent_gvMember_lnkbtnEdit_4" class="btn btn-success" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl06$lnkbtnEdit&#39;,&#39;&#39;)">Edit</a>
+                                <a onclick="return fnConfirmDelete();" id="MainContent_gvMember_lnkbtnDelete_4" class="btn btn-info" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl06$lnkbtnDelete&#39;,&#39;&#39;)">Delete</a>
+                            </td>
+		</tr><tr>
+			<td>
+                                
+                                <span id="MainContent_gvMember_lblMemberNo_5">6</span>
+                                </td><td>
+                                <span id="MainContent_gvMember_lblFullName_5">Kay Khine Pyone Wai</span>
+                            </td><td>
+                                <span id="MainContent_gvMember_lblAddress_5">Mandalay</span>
+                            </td><td>
+                               
+                        <span id="MainContent_gvMember_lblMovieRented_5">Forgetting Sarah Marshal</span>
+                                
+                             </td><td>
+                               
+                 <span id="MainContent_gvMember_lblSalutation_5">Mr</span>
+                                
+                             </td><td>
+                                <a id="MainContent_gvMember_lnkbtnEdit_5" class="btn btn-success" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl07$lnkbtnEdit&#39;,&#39;&#39;)">Edit</a>
+                                <a onclick="return fnConfirmDelete();" id="MainContent_gvMember_lnkbtnDelete_5" class="btn btn-info" href="javascript:__doPostBack(&#39;ctl00$MainContent$gvMember$ctl07$lnkbtnDelete&#39;,&#39;&#39;)">Delete</a>
+                            </td>
+		</tr>
+	</table>
+</div>
