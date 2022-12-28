@@ -11,26 +11,26 @@ namespace Assignment2Web.Views.Member
 {
 
 
-    public partial class MemberList
+    public partial class ExoprtList
     {
 
         /// <summary>
-        /// lnkbtnNew control.
+        /// FileUploadTo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbtnNew;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadTo;
 
         /// <summary>
-        /// lnkbtnExport control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbtnExport;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
 
         /// <summary>
         /// Import control.
@@ -40,6 +40,24 @@ namespace Assignment2Web.Views.Member
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton Import;
+
+        /// <summary>
+        /// MemberList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton MemberList;
+
+        /// <summary>
+        /// revFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revFile;
 
         /// <summary>
         /// gvMember control.
