@@ -30,13 +30,11 @@
                                 <asp:LinkButton ID="lnkbtnEdit" runat="server" CssClass="btn btn-success" CommandName="Edit" CommandArgument='<%# Eval("RentedId") %>'>Edit</asp:LinkButton>
                                 <asp:LinkButton ID="lnkbtnDelete" runat="server" onClientClick="return fnConfirmDelete();" CssClass="btn btn-info" CommandName="Delete" CommandArgument='<%# Eval("RentedId") %>'>Delete</asp:LinkButton>
                             </ItemTemplate>
-
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
             </div>
         </div>
-
     </div>
 
     <script language="javascript" type="text/javascript">
