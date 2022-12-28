@@ -20,7 +20,6 @@ namespace Assignment2Web.Views.Member
             BindData();
         }
 
-        //sdfghjdfghj
         void BindData()
         {
             MemberService memberService = new MemberService();
