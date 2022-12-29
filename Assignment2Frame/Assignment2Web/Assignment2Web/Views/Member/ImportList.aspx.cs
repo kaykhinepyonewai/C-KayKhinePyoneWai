@@ -24,7 +24,7 @@ namespace Assignment2Web.Views.Member
         protected void lnkbtnImport_Click(object sender, EventArgs e)
         {
             ExcelUpload();
-            Response.Redirect("~/Views/Member/MemberList.aspx");
+           
         }
 
         void ExcelUpload()
@@ -86,6 +86,7 @@ namespace Assignment2Web.Views.Member
                             }
                         }
                     }
+                    Response.Redirect("~/Views/Member/MemberList.aspx");
                 }
             }
         }
