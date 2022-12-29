@@ -9,6 +9,9 @@ using System.IO;
 using System.Linq;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
+using System.Web.UI.WebControls;
+using System.Web;
+
 namespace Assignment2Web.Views.Member
 {
     public partial class ExoprtList : System.Web.UI.Page
@@ -21,14 +24,7 @@ namespace Assignment2Web.Views.Member
         protected void lnkbtnImport_Click(object sender, EventArgs e)
         {
             ExcelUpload();
-        }
-
-        void BindData()
-        {
-            MemberService memberService = new MemberService();
-            DataTable dt = memberService.GetAll();
-            gvMember.DataSource = dt;
-            gvMember.DataBind();
+            Response.Redirect("~/Views/Member/MemberList.aspx");
         }
 
         void ExcelUpload()
@@ -86,8 +82,6 @@ namespace Assignment2Web.Views.Member
                                         memberEntity.SalutationId = SalutationId;
                                         memberService.Insert(memberEntity);
                                     }
-                                    BindData();
-
                                 }
                             }
                         }
@@ -96,9 +90,5 @@ namespace Assignment2Web.Views.Member
             }
         }
 
-        protected void lnkbtnMemberList_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Views/Member/MemberList.aspx");
-        }
     }
 }

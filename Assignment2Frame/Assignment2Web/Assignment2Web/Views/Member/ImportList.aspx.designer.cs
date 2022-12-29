@@ -42,15 +42,6 @@ namespace Assignment2Web.Views.Member
         protected global::System.Web.UI.WebControls.LinkButton Import;
 
         /// <summary>
-        /// MemberList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton MemberList;
-
-        /// <summary>
         /// revFile control.
         /// </summary>
         /// <remarks>
@@ -58,14 +49,5 @@ namespace Assignment2Web.Views.Member
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator revFile;
-
-        /// <summary>
-        /// gvMember control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMember;
     }
 }

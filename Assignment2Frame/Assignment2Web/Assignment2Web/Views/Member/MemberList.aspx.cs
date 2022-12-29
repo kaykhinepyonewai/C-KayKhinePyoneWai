@@ -72,7 +72,6 @@ namespace Assignment2Web.Views.Member
                 wsDt.Cells.AutoFitColumns();
                 Response.BinaryWrite(pck.GetAsByteArray());
             }
-
             Response.Write("<script>alert('MemberList Excel has been Saved To Download Location') </script>");
             Response.Flush();
             Response.End();
